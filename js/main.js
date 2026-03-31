@@ -1,4 +1,5 @@
 import './modules/hamburger.js';
+import './modules/hero.js';
 
 const navLinks = document.querySelectorAll("#menu a, #desktopMenu a");
 
