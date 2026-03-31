@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Class OOP Counter</title>
+    <title>Vue.js + Laravel API</title>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
@@ -13,5 +13,26 @@
     <script defer type="module" src="js/main.js"></script>
 </head>
 <body>
+
+     <div class="full-width-header">
+        <header class="grid-con">
+           <div id="header-logo" class="col-span-2 m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-6">
+                <a href="index.html" class="logo">Movie API</a>
+           </div>
+            <button id="hamburger" class="col-start-4 col-end-4">&#9776;</button>
+            <div class="overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="overlay">
+                <button id="close">&#10005;</button>
+                <nav id="menu">
+                    <ul>
+                        <li><a href="#index">Home</a></li>
+                        <li><a href="#movies">Movies</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+    </div>
+
+
+
 </body>
 </html>
