@@ -1,3 +1,12 @@
+section {
+    scroll-margin-top: 100px; /* adjust to your header height */
+}
+
+html {
+    overflow-y: scroll;
+    scrollbar-gutter: stable;
+}
+
 .full-width-header {
     background: black;
     border-bottom: 3px solid red;
@@ -165,3 +174,4 @@ header {
         padding: 8px 26px;
     }
 }
+
