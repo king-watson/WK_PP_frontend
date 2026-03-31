@@ -1,0 +1,51 @@
+.about-box,
+.how-box {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding: 32px;
+}
+
+.about-box {
+  min-height: 240px;
+}
+
+.how-box {
+  min-height: 180px;
+}
+
+.section-label {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 14px;
+  color: red;
+  margin-bottom: 12px;
+}
+
+.about-box h2,
+.how-box h3 {
+  margin-bottom: 16px;
+  line-height: 1;
+  color: white;
+}
+
+.about-box h2 {
+  font-size: 32px;
+}
+
+.how-box h3 {
+  font-size: 24px;
+}
+
+.section-text {
+  color: grey;
+  line-height: 28px;
+  max-width: 1040px;
+  margin-bottom: 16px;
+}
+
+.glow-divider {
+  height: 2px;
+  background: red;
+  box-shadow: 0 0 18px red;
+  border-radius: 10px;
+}
