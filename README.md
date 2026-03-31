@@ -25,7 +25,7 @@ This project was built as part of a web development course assignment. It demons
 
 1. Clone the repository
 ```bash
-   git clone <your-repo-link>
+   git clone <WK_PP_frontend>
 ```
 2. Import the `.sql` file into your local MySQL database
 3. Copy `.env` and update your database credentials
