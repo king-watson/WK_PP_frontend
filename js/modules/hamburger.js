@@ -1,7 +1,7 @@
 const hamburger = document.querySelector("#hamburger");
-const closeButton = document.querySelector("#close");
-const menuOverlay = document.querySelector("#overlay");
-const menuLinks = document.querySelectorAll("#menu ul li a");
+const closeButton = document.querySelector("#nav-close");
+const menuOverlay = document.querySelector("#nav-overlay");
+const menuLinks = document.querySelectorAll("#nav-menu ul li a");
 
 function openMenu() {
     menuOverlay.classList.add("open");
@@ -21,24 +21,16 @@ function toggleMenu() {
     }
 }
 
-// I stop the default jump and just close the menu
-function handleNavClick(event) {
-    event.preventDefault();
-
-    const targetId = event.currentTarget.getAttribute("href");
-    const targetSection = document.querySelector(targetId);
-
+// Close menu when a nav link is clicked, let main.js handle the scroll
+function handleNavClick() {
     closeMenu();
-    targetSection.scrollIntoView({ behavior: "smooth" });
-}
-
-function addNavEvents(link) {
-    link.addEventListener("click", handleNavClick);
 }
 
 hamburger.addEventListener("click", toggleMenu);
 closeButton.addEventListener("click", closeMenu);
 
-menuLinks.forEach(addNavEvents);
+menuLinks.forEach(function(link) {
+    link.addEventListener("click", handleNavClick);
+});
 
 export { toggleMenu };
