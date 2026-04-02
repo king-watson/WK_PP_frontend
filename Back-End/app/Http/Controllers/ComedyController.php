@@ -16,8 +16,6 @@ class ComedyController extends Controller
     {
         $movieTitle = $request->get('movie_title', '');
         $movieDirector = $request->get('movie_director', '');
-        $comedyQuery = Comedy::query();
-        $comedies = $comedyQuery->get();
     }
 
     /**
