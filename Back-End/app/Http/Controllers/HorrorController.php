@@ -18,6 +18,15 @@ class HorrorController extends Controller
         $movieDirector = $request->get('movie_director', '');
 
         $horrorQuery = Horror::query();
+
+        if (!empty($movieTitle)) {
+            $horrorQuery->where('movie_title', 'LIKE', '%' . $movieTitle . '%');
+        }
+
+        if (!empty($movieDirector)) {
+            $horrorQuery->where('movie_director', 'LIKE', '%' . $movieDirector . '%');
+        }
+
         $horrors = $horrorQuery->get();
 
         return $horrors;
