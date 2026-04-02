@@ -14,83 +14,82 @@
 </head>
 <body>
 
-     <div class="full-width-header">
-        <header class="grid-con">
-           <div id="header-logo" class="col-span-2 m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-6">
-                <a href="index.html" class="logo">Movie API</a>
-           </div>
-            <button id="hamburger" class="col-start-4 col-end-4">&#9776;</button>
-            <div class="overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="overlay">
-                <button id="close">&#10005;</button>
-                <nav id="menu">
+
+    <!-- HEADER -->
+    <header class="header-wrap">
+        <div class="grid-con">
+            <a href="index.html" class="col-span-2 m-col-span-4 l-col-span-4" id="header-logo">Movie API</a>
+            <button id="hamburger">&#9776;</button>
+            <div class="nav-overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="nav-overlay">
+                <button id="nav-close">&#10005;</button>
+                <nav id="nav-menu">
                     <ul>
-                        <li><a href="#index">Home</a></li>
+                        <li><a href="#hero">Home</a></li>
                         <li><a href="#movies">Movies</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </nav>
             </div>
-        </header>
-    </div>
-
-    <section class="hero" id="hero">
-    <div class="hero__overlay"></div>
- 
-    <div class="grid-con hero__grid">
- 
-      <div class="hero__content col-span-4 m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-6">
-        <p class="hero__eyebrow">Try our</p>
-        <h1 class="hero__title">MOVIE API</h1>
-        <p class="hero__desc">
-          A custom-built Movie API connected to a Vue.js frontend. Browse a curated list of films pulled live from our Laravel backend, click any title to instantly load its details, and explore by genre all on one seamless page.
-        </p>
-        <div class="hero__buttons">
-          <a href="#" class="btn">View Movies</a>
-          <a href="#" class="btn">About our API</a>
         </div>
-      </div>
- 
+    </header>
+
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-overlay"></div>
+        <div class="grid-con">
+            <div class="hero-content col-span-full m-col-start-4 m-col-end-9 l-col-start-3 l-col-end-11" id="hero-content">
+                <p id="hero-eyebrow">Try our</p>
+                <h1 id="hero-title">MOVIE API</h1>
+                <p id="hero-desc">
+                    A custom-built Movie API connected to a Vue.js frontend. Browse a curated list of films pulled live from our Laravel backend, click any title to instantly load its details, and explore by genre all on one seamless page.
+                </p>
+                <div id="hero-buttons">
+                    <a href="#movies" class="btn">View Movies</a>
+                    <a href="#about" class="btn">About our API</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT CARD -->
+    <section class="about-card" id="about">
+        <div class="grid-con">
+            <div class="card-text col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7" id="about-text">
+                <p class="section-label">About The API</p>
+                <h2>Explore our Movie API</h2>
+                <p class="section-text">
+                    Our Movie API is built to help users browse a curated collection of films through a simple and responsive interface.
+                    It provides a sorted listing of movie entries along with a separate endpoint for viewing detailed information about each title.
+                </p>
+            </div>
+            <img class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" src="images/movies-hero.jpg" alt="Movie API preview" id="about-img">
+        </div>
+    </section>
+
+
+    <!-- DIVIDER -->
+    <div class="glow-divider">
+        <div class="grid-con">
+            <span class="col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-10" id="glow-line"></span>
+        </div>
     </div>
- 
-    <nav class="hero__genres grid-con">
-      <div class="genre-list col-span-4 m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
-        <a href="#" class="genre">Adventure</a>
-        <a href="#" class="genre">Romance</a>
-        <a href="#" class="genre">Fantasy</a>
-        <a href="#" class="genre">Action</a>
-        <a href="#" class="genre active">Horror</a>
-        <a href="#" class="genre">Comedy</a>
-      </div>
-    </nav>
-  </section>
 
- <section class="api-section">
-<div class="api-card about-card col-span-2 l-col-start-2 l-col-end-12 grid-con">
-  <div class="card-text col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7">
-    <p class="section-label">About The API</p>
-    <h2>Explore our Movie API</h2>
-    <p class="section-text">
-      Our Movie API is built to help users browse a curated collection of films through a simple and responsive interface.
-      It provides a sorted listing of movie entries along with a separate endpoint for viewing detailed information about each title.
-    </p>
-  </div>
-  <img class="col-span-4 m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" src="images/movies-hero.jpg" alt="Movie API preview">
-</div>
 
-  <div class="glow-divider grid-con col-span-full m-col-start-2 m-col-end-12 l-col-start-2 l-col-end-10"></div>
-
- <div class="api-card how-card col-span-2 l-col-start-2 l-col-end-12 grid-con">
-  <img class=" col-span-4 m-col-start-1 m-col-end-6 l-col-end-7" src="images/movies-hero.jpg" alt="How to use the API preview">
-  <div class="card-text col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13">
-    <p class="section-label">How To Use Our API</p>
-    <h2>Simple and easy to connect</h2>
-    <p class="section-text">
-      This section will explain how to access the API, what endpoints are available, and how to display the data inside your Vue app.
-    </p>
-  </div>
-</div>
-</section>
-
+    <!-- HOW TO CARD -->
+    <section class="how-card" id="how-to">
+        <div class="grid-con">
+            <img class="col-span-full m-col-start-1 m-col-end-6 l-col-start-1 l-col-end-7" src="images/movies-hero.jpg" alt="How to use the API" id="how-img">
+            <div class="card-text col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" id="how-text">
+                <p class="section-label">How To Use Our API</p>
+                <h2>Simple and easy to connect</h2>
+                <p class="section-text">
+                    This section will explain how to access the API, what endpoints are available, and how to display the data inside your Vue app.
+                </p>
+            </div>
+        </div>
+    </section>
 
 
 </body>
