@@ -1,22 +1,37 @@
-.about-box,
-.how-box {
-  margin-top: 50px;
-  margin-bottom: 50px;
-  padding: 32px;
-}
-
-
-.about-card {
-  align-items: center;
-  padding-top: 100px;
-  padding-bottom: 100px;
-}
-
-
+/* ABOUT & HOW CARDS */
+.about-card,
 .how-card {
   align-items: center;
   padding-top: 100px;
   padding-bottom: 100px;
+}
+
+.about-card h2,
+.how-card h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  color: white;
+}
+
+.about-card img {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 12px;
+  padding-left: 40px;
+}
+
+.how-card img {
+  width: 90%;
+  object-fit: cover;
+  border-radius: 12px;
+  padding-right: 40px;
+}
+
+/* CARD TEXT */
+.card-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .section-label {
@@ -27,48 +42,15 @@
   margin-bottom: 12px;
 }
 
-.about-card h2,
-.how-card h2 {
-  margin-bottom: 10px;
-  color: white;
-}
-
-.how-card img {
-  width: 90%;
-  object-fit: cover;
-  border-radius: 12px;
-  padding-right: 40px;
-}
-
-.about-card img {
-    width: 90%;
-  object-fit: cover;
-  border-radius: 12px;
-  padding-left: 40px;
-}
-
-.about-card h2 {
-  font-size: 42px;
-}
-
-.how-card h2 {
-  font-size: 42px;
-}
-
 .section-text {
   color: grey;
   line-height: 28px;
 }
 
+/* DIVIDER */
 .glow-divider {
   height: 2px;
   background: red;
   box-shadow: 0 0 18px red;
   border-radius: 10px;
-}
-
-.card-text {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
