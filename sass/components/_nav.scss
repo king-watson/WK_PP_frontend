@@ -28,15 +28,17 @@ header {
     align-self: center;
 }
 
+
 #hamburger {
     font-size: 28px;
     background: none;
     color: red;
     cursor: pointer;
     padding: 0px 10px;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
     text-decoration: none;
     border: none;
+    justify-self: end;
 }
 
 .nav-overlay {
@@ -67,6 +69,7 @@ header {
     border-radius: 6px;
     line-height: 1;
     border: none;
+    text-decoration: none;
 }
 
 
