@@ -1,5 +1,6 @@
 import './modules/hamburger.js';
 import './modules/hero.js';
+import { movies } from './modules/movies.js';
 
 const navLinks = document.querySelectorAll("#menu a, #desktopMenu a");
 
@@ -16,3 +17,5 @@ function handleNavClick(e) {
 navLinks.forEach(function addScrollListener(link) {
     link.addEventListener("click", handleNavClick);
 });
+
+movies();
