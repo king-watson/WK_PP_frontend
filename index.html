@@ -81,8 +81,65 @@
         </div>
     </section>
 
+    <div class="grid-con" id="app">
 
+    <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-2 l-col-end-12">
+    <h2>Movie API</h2>
+    <p>Explore a curated collection of must-watch Horror and Comedy films.</p>
+    <p>Click on a movie to find out more about it.</p>
 
+    <div v-if="loadingMovies">
+      <img class="loader" src="images/loader.svg" alt="Loading movies...">
+    </div>
 
+    <div v-else id="category-lists">
+      <h3>Horror</h3>
+      <ul id="horror-list">
+        <li v-for="movie in horrorMovies" :key="movie.id">
+          <h4>
+            Title:
+            <button @click="getMovie(movie.id)">
+              {{ movie.title }}
+            </button>
+          </h4>
+        </li>
+      </ul>
+
+      <h3>Comedy</h3>
+      <ul id="comedy-list">
+        <li v-for="movie in comedyMovies" :key="movie.id">
+          <h4>
+            Title:
+            <button @click="getMovie(movie.id)">
+              {{ movie.title }}
+            </button>
+          </h4>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-span-full m-col-start-1 m-col-end-13" ref="movieInfoCon">
+    <div v-if="loadingMovieDetails">
+      <img class="loader" src="images/loader.svg" alt="Loading movie details">
+    </div>
+    <div v-else-if="error">
+      {{ error }}
+    </div>
+    <div v-else-if="selectedMovie" id="info-box">
+      <img :src="selectedMovie.image_url" :alt="selectedMovie.title">
+      <p>
+        <span class="title">Director:</span>
+        {{ selectedMovie.director }}
+      </p>
+      <p>
+        <span class="title">Genre:</span>
+        {{ selectedMovie.genre }}
+      </p>
+    </div>
+  </div>
+
+  <footer class="col-span-full"></footer>
+</div>
 </body>
 </html>
