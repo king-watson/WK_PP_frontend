@@ -2,19 +2,15 @@ section {
     scroll-margin-top: 100px;
 }
 
-
 html {
     overflow-y: scroll;
     scrollbar-gutter: stable;
 }
 
-
-/* HEADER */
 .header-wrap {
     background: black;
     border-bottom: 3px solid red;
 }
-
 
 header {
     padding-top: 20px;
@@ -32,7 +28,6 @@ header {
     align-self: center;
 }
 
-
 #hamburger {
     font-size: 28px;
     background: none;
@@ -44,8 +39,6 @@ header {
     border: none;
 }
 
-
-/* NAV OVERLAY */
 .nav-overlay {
     display: none;
     position: fixed;
