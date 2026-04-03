@@ -1,7 +1,7 @@
 const hamburger = document.querySelector("#hamburger");
-const closeButton = document.querySelector("#close");
-const menuOverlay = document.querySelector("#overlay");
-const menuLinks = document.querySelectorAll("#menu ul li a");
+const closeButton = document.querySelector("#nav-close");
+const menuOverlay = document.querySelector("#nav-overlay");
+const menuLinks = document.querySelectorAll("#nav-menu ul li a");
 
 function openMenu() {
     menuOverlay.classList.add("open");
