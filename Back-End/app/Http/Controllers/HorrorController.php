@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HorrorController extends Controller
 {
     /**
-     * Return a list of books
+     * Return a list of movies
      *
      * @return array
      */
