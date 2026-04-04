@@ -9,7 +9,6 @@ class Comedy extends Model
 {
     use HasFactory;
 
-    //Protects empty tables and columns
     protected $fillable = [
         'movie_image',
         'movie_title',

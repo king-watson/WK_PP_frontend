@@ -28,7 +28,7 @@ export function movies() {
     methods: {
       getAllMovies() {
         Promise.all([
-          fetch('http://127.0.0.1:8000/api/horror'),
+          fetch('http://127.0.0.1:8000/api/horror'), 
           fetch('http://127.0.0.1:8000/api/comedy')
         ])
           .then(([horrorResponse, comedyResponse]) => {
