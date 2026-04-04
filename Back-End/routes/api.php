@@ -33,7 +33,7 @@ Route::get('/', function () {
     return json_encode(['hello' => 'world']);
 });
 
-// Horror routes
+// Routes for the horror movies
 Route::get('/horror', [HorrorController::class, 'index']);
 
 Route::get('/horror/{horror}', [HorrorController::class, 'show']);
@@ -44,7 +44,7 @@ Route::patch('/horror/{horror}', [HorrorController::class, 'update']);
 
 Route::delete('/horror/{horror}', [HorrorController::class, 'destroy']);
 
-// Comedy routes
+// Routes for the comedy movies 
 Route::get('/comedy', [ComedyController::class, 'index']);
 
 Route::get('/comedy/{comedy}', [ComedyController::class, 'show']);
