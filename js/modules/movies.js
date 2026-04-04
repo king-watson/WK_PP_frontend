@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 
 export function movies() {
-  const app = createApp({
+  createApp({
     data() {
       return {
         moviesData: [],
@@ -18,7 +18,7 @@ export function movies() {
 
     methods: {
       getMovies() {
-        fetch('http://your-api-url.ca/api/movies')
+        fetch('http://127.0.0.1:8000/api/horror')
           .then(res => {
             if (!res.ok) {
               throw new Error('Failed to fetch the movies');
@@ -26,7 +26,7 @@ export function movies() {
             return res.json();
           })
           .then(movies => {
-            this.moviesData = movies.data;
+            this.moviesData = movies;
           })
           .catch(err => {
             this.error = err.message;
@@ -41,25 +41,19 @@ export function movies() {
         this.error = null;
         this.selectedMovie = null;
 
-        fetch(`http://your-api-url.ca/api/movies/${id}`)
+        fetch(`http://127.0.0.1:8000/api/horror/${id}`)
           .then(res => {
             if (!res.ok) {
               throw new Error('Failed to fetch movie details');
             }
             return res.json();
           })
-          .then(movie => {
-            if (!movie.data) {
-              throw new Error('Sorry, we were unable to find the movie you requested');
-            }
-
-            const movieData = movie.data;
-
+          .then(movieData => {
             this.selectedMovie = {
-              title: movieData.title || 'Not available',
-              director: movieData.director || 'Not available',
-              genre: movieData.genre || 'Not available',
-              image_url: movieData.image_url || ''
+              title: movieData.movie_title || 'Not available',
+              director: movieData.movie_director || 'Not available',
+              genre: movieData.movie_genre || 'Not available',
+              image_url: movieData.movie_image || ''
             };
 
             this.$nextTick(() => {
@@ -68,12 +62,14 @@ export function movies() {
                 behavior: 'smooth'
               });
 
-              gsap.from(this.$refs.movieInfoCon, {
-                opacity: 0,
-                y: 20,
-                duration: 2,
-                ease: "power2.out"
-              });
+              if (this.$refs.movieInfoCon) {
+                gsap.from(this.$refs.movieInfoCon, {
+                  opacity: 0,
+                  y: 20,
+                  duration: 2,
+                  ease: "power2.out"
+                });
+              }
             });
           })
           .catch(err => {
