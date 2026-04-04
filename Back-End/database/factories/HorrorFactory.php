@@ -11,7 +11,7 @@ class HorrorFactory extends Factory
      *
      * @return array
      */
-    public function definition() {
+    public function definition() { /** Again not gonna lie, for creation of these movies names I used AI to generate them, as Marco told us that it's compeletly fine to do so */
 
         $horrorMovies = [
             'The Conjuring' => 'James Wan',
@@ -26,7 +26,6 @@ class HorrorFactory extends Factory
             'The Babadook' => 'Jennifer Kent',
         ];
 
-        // pick UNIQUE title
         $movieTitle = $this->faker->unique()->randomElement(array_keys($horrorMovies));
 
         return [
