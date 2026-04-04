@@ -13,6 +13,7 @@
     <script defer type="module" src="js/main.js"></script>
 </head>
 <body>
+<<<<<<< Updated upstream
 
      <div class="full-width-header">
         <header class="grid-con">
@@ -28,6 +29,103 @@
                         <li><a href="#movies">Movies</a></li>
                     </ul>
                 </nav>
+=======
+ <header class="header-wrap">
+    <div class="grid-con" id="header-grid">
+        <a href="index.html" class="col-span-2 m-col-span-4 l-col-span-4" id="header-logo">Movie API</a>
+        <button id="hamburger" class="col-span-2">&#9776;</button>
+        <div class="nav-overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="nav-overlay">
+            <button id="nav-close">&#10005;</button>
+            <nav id="nav-menu">
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#movies">Movies</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+              </div>
+                 </div>
+</header>
+
+  <main>
+    <section class="hero" id="hero">
+      <div class="hero-overlay"></div>
+      <div class="grid-con">
+        <div class="hero-content col-span-full m-col-start-2 m-col-end-12 l-col-start-1 l-col-end-13" id="hero-content">
+          <p id="hero-eyebrow">Try our</p>
+          <h1 id="hero-title">MOVIE API</h1>
+          <p id="hero-desc">
+            A custom-built Movie API connected to a Vue.js frontend. Browse a curated list of films pulled live from our Laravel backend, click any title to instantly load its details, and explore by genre all on one seamless page.
+          </p>
+          <div id="hero-buttons">
+            <a href="#movies" class="btn">View Movies</a>
+            <a href="#about" class="btn">About our API</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-card" id="about">
+      <div class="grid-con">
+        <div class="card-text col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7" id="about-text">
+          <p class="section-label">About The API</p>
+          <h2>Explore our Movie API</h2>
+          <p class="section-text">
+            Our Movie API is built to help users browse a curated collection of films through a simple and responsive interface.
+            It provides a sorted listing of movie entries along with a separate endpoint for viewing detailed information about each title.
+          </p>
+        </div>
+
+        <img
+          class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13"
+          src="images/marty-supreme.webp"
+          alt="Movie API preview"
+          id="about-img"
+        >
+      </div>
+    </section>
+
+    <section class="how-card" id="how-to">
+      <div class="grid-con">
+        <img
+          class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7"
+          src="images/batman-img.jpg"
+          alt="How to use the API"
+          id="how-img"
+        >
+
+        <div class="card-text col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" id="how-text">
+          <p class="section-label">How To Use Our API</p>
+          <h2>Simple and easy to connect</h2>
+          <p class="section-text">
+            Our website fetches data from a custom API to display movies in two categories: Horror and Comedy.
+            Each movie includes its image, title, director, and genre, allowing content to load dynamically and stay easy to update.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="glow-divider">
+      <div class="grid-con">
+        <span class="col-span-full m-col-span-full l-col-start-1 l-col-end-13" id="glow-line"></span>
+      </div>
+    </div>
+
+    <section id="movies" class="movies-section">
+      <div class="grid-con" id="app">
+        <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
+          <h2>Movie API</h2>
+          <p>Explore a curated collection of must-watch Horror and Comedy films.</p>
+          <p>Click on a movie to find out more about it.</p>
+
+          <div v-if="loadingMovies">
+            <p>Loading movies...</p>
+          </div>
+
+          <div v-else id="category-lists">
+            <div v-if="error">
+              <p>{{ error }}</p>
+>>>>>>> Stashed changes
             </div>
         </header>
     </div>
