@@ -16,6 +16,20 @@ class ComedyController extends Controller
     {
         $movieTitle = $request->get('movie_title', '');
         $movieDirector = $request->get('movie_director', '');
+
+        $comedyQuery = Comedy::query();
+
+        if (!empty($movieTitle)) {
+            $comedyQuery->where('movie_title', 'LIKE', '%' . $movieTitle . '%');
+        }
+
+        if (!empty($movieDirector)) {
+            $comedyQuery->where('movie_director', 'LIKE', '%' . $movieDirector . '%');
+        }
+
+        $comedies = $comedyQuery->get();
+
+        return $comedies;
     }
 
     /**
