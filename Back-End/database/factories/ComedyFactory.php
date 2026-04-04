@@ -11,7 +11,7 @@ class ComedyFactory extends Factory
      *
      * @return array
      */
-    public function definition() {
+    public function definition() { /** Again not gonna lie, for creation of these movies names I used AI to generate them, as Marco told us that it's compeletly fine to do so */
 
         $comedyMovies = [
             'Home Alone' => 'Chris Columbus',

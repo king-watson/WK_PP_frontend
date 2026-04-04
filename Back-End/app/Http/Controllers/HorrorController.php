@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class HorrorController extends Controller
 {
     /**
-     * Return a list of movies
+     * It will return a list of horror movies
      *
      * @return array
      */
@@ -33,7 +33,7 @@ class HorrorController extends Controller
     }
 
     /**
-     * Show a specific horror movie
+     * 
      *
      * @param Horror $horror
      * @return Horror
@@ -60,7 +60,7 @@ class HorrorController extends Controller
         return $horror;
     }
 
-    public function update(Request $request, Horror $horror)
+    public function update(Request $request, Horror $horror) /** Not gonna lie, I took some help of ChatGpt for this update part of the assignemnt as it was not letting me connect the horror movies to the database */
     {
         if ($request->has('movie_title')) {
             $horror->movie_title = $request->input('movie_title');
@@ -79,7 +79,7 @@ class HorrorController extends Controller
         return $horror;
     }
 
-    public function destroy(Horror $horror)
+    public function destroy(Horror $horror) /** I'm not showing any message when the movies from the databse is being deleted, It's fine by me */
     {
         $horror->delete();
     }

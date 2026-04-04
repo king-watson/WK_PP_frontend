@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 class ComedyController extends Controller
 {
     /**
-     * Return a list of books
+     * It will return me a list of comedy movies from the database
      *
      * @return array
      */
@@ -33,7 +33,7 @@ class ComedyController extends Controller
     }
 
     /**
-     * Show a specific comedy movie
+     * It will show a specific comedy movie
      *
      * @param Comedy $comedy
      * @return Comedy
@@ -60,7 +60,7 @@ class ComedyController extends Controller
         return $comedy;
     }
 
-    public function update(Request $request, Comedy $comedy)
+    public function update(Request $request, Comedy $comedy) /**This function will help me to update the the movie information in the database */
     {
         if ($request->has('movie_title')) {
             $comedy->movie_title = $request->input('movie_title');
