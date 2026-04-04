@@ -1,183 +1,223 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="initial-scale=1.0, width=device-width">
-    <title>Vue.js + Laravel API</title>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
-    <link href="css/grid.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <script defer src="https://unpkg.com/gsap@3/dist/gsap.min.js"></script>
-    <script type="importmap">
-        {
-          "imports": {
-            "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
-          }
-        }
-      </script>
-    <script defer type="module" src="js/main.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vue.js + Laravel API</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Special+Gothic+Expanded+One&display=swap" rel="stylesheet">
+  <link href="css/grid.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js"
+      }
+    }
+  </script>
+
+  <script type="module" src="js/main.js"></script>
 </head>
 
 <body>
-
-<header class="header-wrap">
+  <header class="header-wrap">
     <div class="grid-con" id="header-grid">
-        <a href="index.html" class="col-span-2 m-col-span-4 l-col-span-4" id="header-logo">Movie API</a>
-        <button id="hamburger" class="col-span-2">&#9776;</button>
-        <div class="nav-overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="nav-overlay">
-            <button id="nav-close">&#10005;</button>
-            <nav id="nav-menu">
-                <ul>
-                    <li><a href="#hero">Home</a></li>
-                    <li><a href="#movies">Movies</a></li>
-                    <li><a href="#about">About</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+      <a href="index.html" class="col-span-2 m-col-span-4 l-col-span-4" id="header-logo">Movie API</a>
 
+      <button id="hamburger" class="col-span-2" aria-label="Open navigation menu">&#9776;</button>
+
+      <div class="nav-overlay m-col-start-6 m-col-end-13 l-col-start-8 l-col-end-13" id="nav-overlay">
+        <button id="nav-close" aria-label="Close navigation menu">&#10005;</button>
+
+        <nav id="nav-menu">
+          <ul>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#movies">Movies</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <nav id="desktopMenu" class="desktop-menu m-col-start-7 m-col-end-13 l-col-start-8 l-col-end-13">
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#movies">Movies</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
     <section class="hero" id="hero">
-        <div class="hero-overlay"></div>
-        <div class="grid-con">
-            <div class="hero-content col-span-full m-col-start-2 m-col-end-12 l-col-start-1 l-col-end-13" id="hero-content">
-                <p id="hero-eyebrow">Try our</p>
-                <h1 id="hero-title">MOVIE API</h1>
-                <p id="hero-desc">
-                    A custom-built Movie API connected to a Vue.js frontend. Browse a curated list of films pulled live from our Laravel backend, click any title to instantly load its details, and explore by genre all on one seamless page.
-                </p>
-                <div id="hero-buttons">
-                    <a href="#movies" class="btn">View Movies</a>
-                    <a href="#about" class="btn">About our API</a>
-                </div>
-            </div>
+      <div class="hero-overlay"></div>
+      <div class="grid-con">
+        <div class="hero-content col-span-full m-col-start-2 m-col-end-12 l-col-start-1 l-col-end-13" id="hero-content">
+          <p id="hero-eyebrow">Try our</p>
+          <h1 id="hero-title">MOVIE API</h1>
+          <p id="hero-desc">
+            A custom-built Movie API connected to a Vue.js frontend. Browse a curated list of films pulled live from our Laravel backend, click any title to instantly load its details, and explore by genre all on one seamless page.
+          </p>
+          <div id="hero-buttons">
+            <a href="#movies" class="btn">View Movies</a>
+            <a href="#about" class="btn">About our API</a>
+          </div>
         </div>
+      </div>
     </section>
 
     <section class="about-card" id="about">
-        <div class="grid-con">
-            <div class="card-text col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7" id="about-text">
-                <p class="section-label">About The API</p>
-                <h2>Explore our Movie API</h2>
-                <p class="section-text">
-                    Our Movie API is built to help users browse a curated collection of films through a simple and responsive interface.
-                    It provides a sorted listing of movie entries along with a separate endpoint for viewing detailed information about each title.
-                </p>
-            </div>
-            <img class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" src="images/marty-supreme.webp" alt="Movie API preview" id="about-img">
+      <div class="grid-con">
+        <div class="card-text col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7" id="about-text">
+          <p class="section-label">About The API</p>
+          <h2>Explore our Movie API</h2>
+          <p class="section-text">
+            Our Movie API is built to help users browse a curated collection of films through a simple and responsive interface.
+            It provides a sorted listing of movie entries along with a separate endpoint for viewing detailed information about each title.
+          </p>
         </div>
+
+        <img
+          class="col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13"
+          src="images/marty-supreme.webp"
+          alt="Movie API preview"
+          id="about-img"
+        >
+      </div>
     </section>
 
     <section class="how-card" id="how-to">
-        <div class="grid-con">
-            <img class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7" src="images/batman-img.jpg" alt="How to use the API" id="how-img">
-            <div class="card-text col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" id="how-text">
-                <p class="section-label">How To Use Our API</p>
-                <h2>Simple and easy to connect</h2>
-                <p class="section-text">
-Our website fetches data from a custom API to display movies in two categories: Horror and Comedy. Each movie includes its image, title, director, and genre, allowing content to load dynamically and stay easy to update.                </p>
+      <div class="grid-con">
+        <img
+          class="col-span-full m-col-start-1 m-col-end-7 l-col-start-1 l-col-end-7"
+          src="images/batman-img.jpg"
+          alt="How to use the API"
+          id="how-img"
+        >
+
+        <div class="card-text col-span-full m-col-start-7 m-col-end-13 l-col-start-7 l-col-end-13" id="how-text">
+          <p class="section-label">How To Use Our API</p>
+          <h2>Simple and easy to connect</h2>
+          <p class="section-text">
+            Our website fetches data from a custom API to display movies in two categories: Horror and Comedy.
+            Each movie includes its image, title, director, and genre, allowing content to load dynamically and stay easy to update.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="glow-divider">
+      <div class="grid-con">
+        <span class="col-span-full m-col-span-full l-col-start-1 l-col-end-13" id="glow-line"></span>
+      </div>
+    </div>
+
+    <section id="movies" class="movies-section">
+      <div class="grid-con" id="app">
+        <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
+          <h2>Movie API</h2>
+          <p>Explore a curated collection of must-watch Horror and Comedy films.</p>
+          <p>Click on a movie to find out more about it.</p>
+
+          <div v-if="loadingMovies">
+            <p>Loading movies...</p>
+          </div>
+
+          <div v-else id="category-lists">
+            <div v-if="error">
+              <p>{{ error }}</p>
             </div>
+
+            <template v-else>
+              <h3>Horror</h3>
+              <ul id="horror-list">
+                <li v-for="movie in horrorMovies" :key="'horror-' + movie.id">
+                  <h4>
+                    Title:
+                    <button type="button" @click="getMovie(movie.id, 'horror')">
+                      {{ movie.movie_title }}
+                    </button>
+                  </h4>
+                </li>
+              </ul>
+
+              <h3>Comedy</h3>
+              <ul id="comedy-list">
+                <li v-for="movie in comedyMovies" :key="'comedy-' + movie.id">
+                  <h4>
+                    Title:
+                    <button type="button" @click="getMovie(movie.id, 'comedy')">
+                      {{ movie.movie_title }}
+                    </button>
+                  </h4>
+                </li>
+              </ul>
+            </template>
+          </div>
         </div>
-    </section>
 
-      <div class="glow-divider">
-        <div class="grid-con">
-            <span class="col-span-full m-col-span-full l-col-start-1 l-col-end-13" id="glow-line"></span>
+        <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13" ref="movieInfoCon">
+          <div v-if="loadingMovieDetails">
+            <p>Loading movie details...</p>
+          </div>
+
+          <div v-else-if="error">
+            <p>{{ error }}</p>
+          </div>
+
+          <div v-else-if="selectedMovie" id="info-box">
+            <img :src="selectedMovie.image_url" :alt="selectedMovie.title">
+
+            <h3>{{ selectedMovie.title }}</h3>
+
+            <p>
+              <span class="title">Director:</span>
+              {{ selectedMovie.director }}
+            </p>
+
+            <p>
+              <span class="title">Genre:</span>
+              {{ selectedMovie.genre }}
+            </p>
+          </div>
         </div>
-    </div>
-
- <div class="grid-con" id="app">
-
-  <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13">
-    <h2>Movie API</h2>
-    <p>Explore a curated collection of must-watch Horror and Comedy films.</p>
-    <p>Click on a movie to find out more about it.</p>
-
-    <div v-if="loadingMovies">
-      <img class="loader" src="images/loader.svg" alt="Loading movies...">
-    </div>
-
-    <div v-else id="category-lists">
-      <h3>Horror</h3>
-      <ul id="horror-list">
-        <li v-for="movie in horrorMovies" :key="movie.id">
-          <h4>
-            Title:
-            <button @click="getMovie(movie.id)">
-              {{ movie.title }}
-            </button>
-          </h4>
-        </li>
-      </ul>
-
-      <h3>Comedy</h3>
-      <ul id="comedy-list">
-        <li v-for="movie in comedyMovies" :key="movie.id">
-          <h4>
-            Title:
-            <button @click="getMovie(movie.id)">
-              {{ movie.title }}
-            </button>
-          </h4>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="col-span-full m-col-start-1 m-col-end-13 l-col-start-1 l-col-end-13" ref="movieInfoCon">
-    <div v-if="loadingMovieDetails">
-      <img class="loader" src="images/loader.svg" alt="Loading movie details">
-    </div>
-    <div v-else-if="error">
-      {{ error }}
-    </div>
-    <div v-else-if="selectedMovie" id="info-box">
-      <img :src="selectedMovie.image_url" :alt="selectedMovie.title">
-      <p>
-        <span class="title">Director:</span>
-        {{ selectedMovie.director }}
-      </p>
-      <p>
-        <span class="title">Genre:</span>
-        {{ selectedMovie.genre }}
-      </p>
-    </div>
-  </div>
-
-</div>
-
-<footer class="site-footer">
-  <hr>
-  <div class="footer-container grid-con">
-    <div class="footer-about col-span-4 m-col-span-4 l-col-span-4">
-      <h3>Movie API</h3>
-      <p>Access to movies instantly. Browse our movies using our simple and powerful API.</p>
-    </div>
-
-    <div class="footer-links col-span-4 m-col-span-4 l-col-span-4">
-      <h4>Quick Links</h4>
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#featured-work">About</a></li>
-        <li><a href="#about">Movies</a></li>
-      </ul>
-    </div>
-
-    <section class="footer-social col-span-4 m-col-span-4 l-col-span-4">
-      <h4>Follow Us</h4>
-      <ul class="social-icons">
-        <li><a href="#" target="_blank"><img src="images/social-media-icons.webp" alt="social-media"></a></li>
-      </ul>
+      </div>
     </section>
-  </div>
+  </main>
 
-  <div class="footer-bottom">
-    <p>&copy; 2026 Kingsley & Pranav. All rights reserved.</p>
-  </div>
-</footer>
+  <footer class="site-footer">
+    <hr>
+    <div class="footer-container grid-con">
+      <div class="footer-about col-span-4 m-col-span-4 l-col-span-4">
+        <h3>Movie API</h3>
+        <p>Access movies instantly. Browse our movies using our simple and powerful API.</p>
+      </div>
 
+      <div class="footer-links col-span-4 m-col-span-4 l-col-span-4">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#movies">Movies</a></li>
+        </ul>
+      </div>
+
+      <section class="footer-social col-span-4 m-col-span-4 l-col-span-4">
+        <h4>Follow Us</h4>
+        <ul class="social-icons">
+          <li><a href="#" target="_blank"><img src="images/social-media-icons.webp" alt="social media"></a></li>
+        </ul>
+      </section>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Kingsley &amp; Pranav. All rights reserved.</p>
+    </div>
+  </footer>
 </body>
 </html>
