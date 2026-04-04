@@ -57,7 +57,7 @@ class RouteServiceProvider extends ServiceProvider
     protected function configureRateLimiting()
     {
         RateLimiter::for('api', function (Request $request) {
-            return Limit::perMinute(500)->by(optional($request->user())->id ?: $request->ip());
+            return Limit::perMinute(500)->by(optional($request->user())->id ?: $request->ip()); /** I changed the per minute from 60 to 500, so that the page dosen't refresh every time it tries to fetch the movie */
         });
     }
 }

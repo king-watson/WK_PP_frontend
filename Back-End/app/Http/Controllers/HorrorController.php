@@ -45,7 +45,7 @@ class HorrorController extends Controller
 
     public function store(Request $request)
     {
-        $movieTitle = $request->input('movie_title');
+        $movieTitle = $request->input('movie_title'); /** In a hurry I forgot to put the function for fetching the images from the database :D */
         $movieDirector = $request->input('movie_director');
         $movieGenre = $request->input('movie_genre', 'Horror');
 

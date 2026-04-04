@@ -9,7 +9,7 @@ class Horror extends Model
 {
     use HasFactory;
 
-    //Protects empty tables and columns
+    //These fillablse will help in protecting empty tables and columns
     protected $fillable = [
         'movie_image',
         'movie_title',
